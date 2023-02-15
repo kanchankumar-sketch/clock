@@ -316,7 +316,7 @@
 <div class="content" role="main">
   <!-- Highlight Card -->
   <div class="card highlight-card">
-    <span>{{ time | async | date: 'hh:mm:ss a' }}</span>
+    <span>{{ time | async | date: datatimeformate }}</span>
   </div>
   <div class="card highlight-card">
     <span>{{ time | async | date: 'mediumDate' }}</span>
@@ -326,5 +326,14 @@
   </div>
   <div class="card highlight-card">
     <span>{{ time | async | date: 'OOOO' }}</span>
+  </div>
+  <div class="card highlight-card">
+    <span>{{today | date:'fullDate'}}</span>
+  </div>
+  <div class="card highlight-card">
+    <span>{{today | date  : datatimeformate : zone }}</span>
+  </div>
+  <div class="card highlight-card">
+    <span>{{test}}</span>
   </div>
 </div>

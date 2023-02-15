@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +11,11 @@ import { map } from 'rxjs/operators';
 export class AppComponent {
   title = 'clock-tab';
   toggle=true;
+  today: number = Date.now();
+  zone='Atlantic/Bermuda';
+  datatimeformate='hh:mm:ss a';
+
+  test=new Date().toLocaleString("en-US", {timeZone: 'Asia/Dubai'})
   private _time$: Observable<Date> = timer(0, 1000).pipe(
     map(tick => new Date())
   );
